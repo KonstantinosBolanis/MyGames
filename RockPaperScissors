@@ -1,0 +1,19 @@
+import random
+
+ComputersChoices = ["ROCK", "PAPER", "SCISSORS"]
+CompChoice = random.choice(ComputersChoices)
+
+
+MyGuess = input("Choose between rock,paper and scissors: ")
+print(MyGuess)
+
+
+if CompChoice == 'ROCK' and MyGuess == 'paper' or CompChoice == 'PAPER' and MyGuess == 'scissors' \
+        or CompChoice == 'SCISSORS' and MyGuess == 'rock':
+    print("You WON")
+elif CompChoice == MyGuess:
+    print("It's a tie")
+else:
+    print("You lost")
+    
+print("Computers choice was " + CompChoice)
