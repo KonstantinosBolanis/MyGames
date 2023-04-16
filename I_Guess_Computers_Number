@@ -1,0 +1,17 @@
+import random
+
+x=int(input("Tell me the max: "))
+
+def function(x):
+        CompGuess=random.randint(1,x)
+        MyGuess=int(input("Guess the number: "))
+        while CompGuess!=MyGuess:
+          if CompGuess<MyGuess:
+             MyGuess=int(input("Lower your number: "))
+          elif CompGuess>MyGuess:
+            MyGuess=int(input("Higher your number: "))
+
+
+function(x)
+
+print("CORRECT")
