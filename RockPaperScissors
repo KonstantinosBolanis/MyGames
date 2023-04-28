@@ -1,19 +1,33 @@
 import random
+from playsound import playsound
 
-ComputersChoices = ["ROCK", "PAPER", "SCISSORS"]
+
+ComputersChoices = ["R", "P", "S"]
 CompChoice = random.choice(ComputersChoices)
+playagain=''
 
 
-MyGuess = input("Choose between rock,paper and scissors: ")
-print(MyGuess)
+while playagain != "no":
+ MyGuess = input("Choose between rock (r),paper (p) and scissors (s): ").upper()
+ print(MyGuess)
 
 
-if CompChoice == 'ROCK' and MyGuess == 'paper' or CompChoice == 'PAPER' and MyGuess == 'scissors' \
-        or CompChoice == 'SCISSORS' and MyGuess == 'rock':
+ if CompChoice == 'R' and MyGuess == 'P' or CompChoice == 'P' and MyGuess == 'S' \
+        or CompChoice == 'S' and MyGuess == 'R':
     print("You WON")
-elif CompChoice == MyGuess:
+ elif CompChoice == MyGuess:
     print("It's a tie")
-else:
+ else:
     print("You lost")
-    
-print("Computers choice was " + CompChoice)
+    playsound(r"C:\Users\konsb\OneDrive\Υπολογιστής\Programming\MyCodes\MyVsCodes\Python\RockPaperScissors\Luffy baka song lyric-[AudioTrimmer.com].mp3")
+ CompChoice1=''
+ if CompChoice == 'R':
+    CompChoice1 = 'Rock'
+ elif CompChoice == 'P':
+      CompChoice1 ='Paper'
+ elif CompChoice== 'S':
+    CompChoice1='Scissors'
+
+
+ print("Computers choice was " + CompChoice1)
+ playagain=input("If you do not want to play again write no else write whatever you like: ")
